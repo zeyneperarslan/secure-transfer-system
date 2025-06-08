@@ -13,6 +13,7 @@ Bu sistemin temel amacı; bir dosyanın hem **gizliliğini**, hem de **bütünl�
 - **iperf3** aracıyla bant genişliği testleri yapılır.
 - Tüm olaylar detaylı bir şekilde `log.txt` dosyasına yazılır.
 - **Tkinter GUI** arayüzü sayesinde işlemler kullanıcı dostu bir ortamda gerçekleştirilir.
+- Demo Video Linki : https://www.youtube.com/watch?v=IIAdUI5zL5I
 
 ---
 
