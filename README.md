@@ -1,55 +1,55 @@
-# Gelişmiş Güvenli Dosya Transfer Sistemi
+# 🔐 Gelişmiş Güvenli Dosya Transfer Sistemi
 
-**AES/RSA Şifreleme · SHA-256 Bütünlük Kontrolü · IP Header Manipülasyonu · MITM Simülasyonu · Ağ Performans Testi**
+**AES/RSA Şifreleme · SHA-256 Bütünlük Kontrolü · IP Header Manipülasyonu · MITM Simülasyonu · Ağ Performans Testi · Checksum Doğrulama**
 
-Bu proje, dosya transferlerinde güvenliği en üst seviyeye çıkarmak amacıyla AES ve RSA şifreleme algoritmalarını, SHA-256 bütünlük kontrolünü ve düşük seviyeli IP paket işleme tekniklerini birleştiren bir sistemdir. Ek olarak, kullanıcı farkındalığı için MITM (Man-in-the-Middle) simülasyonu ve performans testleri içerir.
-
----
-
-## Proje Özeti
-
-Bu sistem ile amaçlanan; dosya iletimi sırasında gizliliği, bütünlüğü ve güvenliği sağlamaktır. Ek olarak:
-
-- TTL ve Fragmentation gibi IP başlık alanları manuel olarak ayarlanabilir.
-- `iperf3` aracıyla ağ bant genişliği testleri yapılabilir.
-- Tüm işlemler `log.txt` dosyasına kayıt edilir.
-- Kullanıcı dostu bir Tkinter arayüzü ile etkileşim sağlanır.
-
-**Demo Video:** [YouTube Linki](https://www.youtube.com/watch?v=IIAdUI5zL5I)
+Bu proje, dosya transferlerinde güvenliği artırmak amacıyla AES ve RSA şifreleme algoritmalarını, SHA-256 bütünlük kontrolünü ve IP paket işleme tekniklerini bir araya getiren gelişmiş bir sistemdir. Ek olarak, MITM (Man-in-the-Middle) simülasyonu ve ağ performans testleri içerir.
 
 ---
 
-## Özellikler
+## 📌 Proje Özeti
+
+- Dosya iletimi sırasında **gizlilik**, **bütünlük** ve **güvenlik** sağlanır.
+- IP başlığı parametreleri (TTL, Fragment) doğrudan manipüle edilebilir.
+- `iperf3` ile bant genişliği testleri yapılabilir.
+- Tüm işlemler `log.txt` dosyasına kaydedilir.
+- Kullanıcı dostu **Tkinter GUI** arayüzü ile etkileşim kolaylaştırılır.
+
+**🎬 Demo Video:** [YouTube Linki](https://www.youtube.com/watch?v=IIAdUI5zL5I)
+
+---
+
+## 🚀 Özellikler
 
 | Özellik                     | Açıklama |
 |----------------------------|----------|
-| AES-256 Şifreleme          | Hızlı ve güçlü simetrik şifreleme |
-| RSA-2048 Anahtar Yönetimi  | Güvenli anahtar değişimi |
+| AES-256 Şifreleme          | Güçlü ve hızlı simetrik şifreleme |
+| RSA-2048 Anahtar Yönetimi  | Güvenli anahtar iletimi |
 | SHA-256 Kontrolü           | Dosya bütünlüğü doğrulaması |
-| IP Başlık Manipülasyonu    | TTL ve fragmentasyon kontrolü |
-| MITM Simülasyonu           | Gerçek saldırı yerine imza analizi |
-| Ağ Performans Testi        | `iperf3` ile hız ölçümü |
-| Tkinter GUI                | Grafik arayüz ile işlem kolaylığı |
-| Loglama                    | Tüm işlemler kaydedilir |
+| IP Başlık Manipülasyonu    | TTL ve Fragmentation kontrolü |
+| MITM Simülasyonu           | Saldırı imzası analizi |
+| Ağ Performans Testi        | `iperf3` ile hız testi |
+| Checksum Hesaplama         | IP paketlerinin elle checksum kontrolü |
+| Tkinter GUI                | Grafiksel kullanıcı arayüzü |
+| Loglama                    | Detaylı işlem kaydı tutulur |
 
 ---
 
-## Dosya Yapısı
+## 📁 Dosya Yapısı
 
 ```
-main3.py         # Ana uygulama dosyası
-README.md        # Açıklama dokümanı
-log.txt          # Çalışma sırasında oluşturulan log kayıtları
+main.py             # Ana Python uygulaması
+README.md           # Açıklama dosyası
+log.txt             # Log kayıtları
 ```
 
 ---
 
-## Kurulum
+## ⚙️ Kurulum
 
 **Gereksinimler:**
 
 - Python 3.8+
-- Gerekli kütüphanelerin yüklenmesi:
+- Gerekli kütüphaneler:
 
 ```bash
 pip install scapy pycryptodome iperf3
@@ -68,66 +68,67 @@ pip install scapy pycryptodome iperf3
 
 ---
 
-## Kullanım
+## 🧪 Kullanım
 
-1. Uygulamayı başlatmak için:
+1. Uygulamayı çalıştır:
 ```bash
-python3 main3.py
+python3 main.py
 ```
 
-2. Açılan GUI üzerinden:
-   - Şifreli dosya gönderimi
-   - Bant genişliği testi
-   - IP başlığı ayarları
-   - MITM simülasyonu işlemleri yapılabilir.
+2. GUI üzerinden:
+   - Dosya gönder/al
+   - Bant genişliği ölç
+   - IP başlıklarını manipüle et
+   - MITM simülasyonu çalıştır
 
-3. Kayıtlar `log.txt` içinde tutulur.
-
----
-
-## MITM Simülasyonu
-
-Gerçek bir saldırı gerçekleştirilmez. Aksine, belirli kelimeler içeren paketler (örn: `malware`, `trojan`, `attack`, `exploit`) analiz edilir ve kullanıcıya bildirim gönderilir.
+3. İşlem sonuçları `log.txt` dosyasına kaydedilir.
 
 ---
 
-## Ağ Performans Testi
+## 🕵️ MITM Simülasyonu
 
-Kullanıcı `iperf3` komutu ile ağ performansını ölçebilir. Sonuçlar grafik arayüzde gösterilir ve log dosyasına yazılır.
+Gerçek saldırı yapılmaz. `EXPLOIT`, `HACK`, `Saldiri` gibi anahtar kelimeler analiz edilir. Kullanıcıya şüpheli içerik hakkında uyarı verilir.
 
 ---
 
-## IP Paket İşleme
+## 📡 Ağ Performans Testi
 
-`Scapy` ile özel IP paketleri oluşturulabilir. Örnek kullanım:
+`iperf3` komutu ile ağ hızı ölçülür. Sonuçlar GUI penceresinde ve log dosyasında gösterilir.
+
+---
+
+## 📦 IP Paket İşleme & Checksum
+
+`Scapy` ile özel IP paketleri oluşturulabilir. Ayrıca manuel olarak checksum hesaplanarak doğruluk kontrolü yapılır.
 
 ```python
-pkt = IP(dst="192.168.1.5", ttl=1, flags="MF") / b"Test"
+pkt = IP(dst="192.168.1.1", ttl=1, flags="MF") / b"Test"
 send(pkt)
 ```
 
 ---
 
-## Test Senaryoları
+## ✅ Test Senaryoları
 
-| Test                             | Açıklama |
-|----------------------------------|----------|
-| Dosya Şifreleme ve Çözme         | AES ile şifreleme ve başarıyla çözme sağlandı. |
-| SHA-256 Doğrulama                | Dosyanın bütünlüğü korundu. |
-| IP Paket Manipülasyonu           | TTL ve Fragmentation başarıyla uygulandı. |
-| Bant Genişliği Ölçümü            | `iperf3` ile ağ testi başarılı şekilde yapıldı. |
-| MITM Simülasyonu                 | Zararlı imzalar doğru tespit edildi. |
-
----
-
-## Lisans
-
-Bu proje MIT lisansı ile lisanslanmıştır. Açık kaynak olarak sunulmaktadır.
+| Test                           | Açıklama |
+|--------------------------------|----------|
+| Dosya Şifreleme ve Çözme       | AES ile şifreleme başarıyla sağlandı |
+| SHA-256 Doğrulama              | Dosya bütünlüğü korundu |
+| IP Paket Manipülasyonu         | TTL/Fragment başarıyla uygulandı |
+| Bant Genişliği Ölçümü          | `iperf3` ile hız testi tamamlandı |
+| MITM Simülasyonu               | Zararlı imzalar başarıyla tespit edildi |
+| Checksum Hesaplama             | IP başlığı checksum değeri doğru bulundu |
 
 ---
 
-## İletişim
+## 📜 Lisans
 
-Geliştirici: Zeynep Erarslan  
-E-posta: [zeyneperarslan03@gmail.com](mailto:zeyneperarslan03@gmail.com)  
-GitHub: [github.com/zeyneperarslan](https://github.com/zeyneperarslan)
+MIT Lisansı ile lisanslanmıştır. Açık kaynaklıdır.
+
+---
+
+## 👤 Geliştirici
+
+**Zeynep Erarslan**  
+📧 zeyneperarslan03@gmail.com  
+🔗 [github.com/zeyneperarslan](https://github.com/zeyneperarslan)
