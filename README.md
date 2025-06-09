@@ -14,7 +14,7 @@ Bu proje, dosya transferlerinde güvenliği artırmak amacıyla AES ve RSA şifr
 - Tüm işlemler `log.txt` dosyasına kaydedilir.
 - Kullanıcı dostu **Tkinter GUI** arayüzü ile etkileşim kolaylaştırılır.
 
-**🎬 Demo Video:** [YouTube Linki](https://www.youtube.com/watch?v=IIAdUI5zL5I)
+**🎬 Demo Video:** [YouTube Linki](https://www.youtube.com/watch?v=fe8AhrajLEk)
 
 ---
 
